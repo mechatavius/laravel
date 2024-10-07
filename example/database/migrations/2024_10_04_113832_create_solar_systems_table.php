@@ -17,13 +17,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('planets', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->unsignedBigInteger('solar_system_id');
-            $table->foreign('solar_system_id')->references('id')->on('solar_systems');
-            $table->timestamps();
-        });
+        
     }
 
     /**
