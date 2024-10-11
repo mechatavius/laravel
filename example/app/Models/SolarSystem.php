@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class solar_system extends Model
+class SolarSystem extends Model
 {
     use HasFactory;
 

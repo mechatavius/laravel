@@ -39,4 +39,10 @@ class Planet extends Model
      * @var bool
      */
     public $timestamps = true;
+
+    public function solarSystem()   
+    {
+        return $this->belongsTo(SolarSystem::class);
+    }
 }
+
