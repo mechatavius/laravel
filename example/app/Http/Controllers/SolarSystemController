@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\SolarSystem; // Zorg ervoor dat je het juiste model importeert
+use Illuminate\Http\Request;
+
+class SolarSystemController extends Controller
+{
+    public function index()
+    {
+        $solarSystems = SolarSystem::with('planets')->get(); // Eager loading
+        return view('solarsystems.index', compact('solarSystems'));
+    }
+
+    public function show($id)
+    {
+        $solarSystem = SolarSystem::with('planets')->findOrFail($id); // Eager loading
+        return view('solarsystems.show', compact('solarSystem'));
+    }
+}
